@@ -13,6 +13,10 @@
     font-family: Khmer OS Bokor; /* Define the second custom font */
     src: url('KhmerOSBokorRegular.ttf') format('truetype'); /* Path to the second TTF file */
   }
+  @font-face {
+    font-family: Khmer OS niroth; /* Define the second custom font */
+    src: url('KhmerOSNirothRegular.ttf') format('truetype'); /* Path to the second TTF file */
+  }
 
   p.bokor{
     font-family: Khmer OS Bokor;
@@ -20,6 +24,10 @@
 
   p.kh{
     font-family: Kh Chheurkach Baphnom;
+  }
+
+  h2.niroth{
+    font-family: Khmer OS niroth;
   }
 
 #card {
@@ -35,27 +43,43 @@
   }
   
   /* Adjust card size for small screens */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 2048px) {
     #card {
       height: auto; /* Allow the height to adjust automatically */
       margin: 2em auto; /* Adjust margin for centering */
     }
-  }
+    p.bokor{
+        font-size: 13pt !important;
+    }
+    p.kh{
+        font-size: 10pt !important;
+      }
+      h2.niroth{
+        font-size: 25pt !important;
+      }
+
+  } 
+
+  
   
   /* Adjust card size for very small screens */
-  @media only screen and (max-width: 300px) {
+  @media only screen and (max-width: 600px) {
     #card {
       width: 90%; /* Adjust width for very small screens */
       max-width: none; /* Remove max-width restriction */
       margin: 2em auto; /* Adjust margin */
     }
     p.bokor{
-        font-size: 10pt !important;
+        font-size: 9pt !important;
     }
     p.kh{
-        font-size: 4pt !important;
+        font-size: 7pt !important;
       }
-  }
+      h2.niroth{
+        font-size: 10pt !important;
+      }
+  } 
+
 
 .heart-shape {
     position: relative;
