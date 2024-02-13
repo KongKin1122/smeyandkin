@@ -1,45 +1,61 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 
-#card {
-  height: 500px;
-  width: 800px;
-  margin: 5em auto;
-  position: fixed;
-  top: -15px;
-  left: 25%;
-  display: flex;
-  visibility: hidden;
+*{
+    top: 0px;
 }
 
-/* Estilos para dispositivos mÃ³viles */
-@media only screen and (max-width: 600px) {
-  #card {
-    width: 90%; /* Reducir el ancho para dispositivos mÃ³viles */
-    height: auto; /* Permitir que la altura se ajuste automÃ¡ticamente */
-    margin: 2em auto; /* Ajustar el margen */
-    position: static; /* Cambiar la posiciÃ³n a estÃ¡tica para que no sea fija */
-    visibility: none; /* Hacer que el elemento sea visible */
-    top: 50px;
- 
-  }
-  .side.side.one {
-    display: none; 
-  }
-  #card p {
-    
-    padding-left: 0 !important; /* Eliminar el relleno a la izquierda en dispositivos mÃ³viles */
-    padding-right: 0 !important; /* Eliminar el relleno a la derecha en dispositivos mÃ³viles */
-    font-size: 1.3em !important;
+@font-face {
+    font-family: Kh Chheurkach Baphnom; /* Define the first custom font */
+    src: url('KhChheurkachBaphnom.ttf') format('truetype'); /* Path to the first TTF file */
   }
   
-    .valentines-day {
+  @font-face {
+    font-family: Khmer OS Bokor; /* Define the second custom font */
+    src: url('KhmerOSBokorRegular.ttf') format('truetype'); /* Path to the second TTF file */
+  }
+
+  p.bokor{
+    font-family: Khmer OS Bokor;
+  }
+
+  p.kh{
+    font-family: Kh Chheurkach Baphnom;
+  }
+
+#card {
+    width: 90%; /* Adjusted width for smaller screens */
+    max-width: 800px; /* Added max-width to maintain layout on larger screens */
+    height: 500px;
+    margin: 5em auto; /* Initial margin for centering */
     position: fixed;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+ /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the card both horizontally and vertically */
+    display: flex;
+    visibility: hidden;
   }
   
-}
+  /* Adjust card size for small screens */
+  @media only screen and (max-width: 600px) {
+    #card {
+      height: auto; /* Allow the height to adjust automatically */
+      margin: 2em auto; /* Adjust margin for centering */
+    }
+  }
+  
+  /* Adjust card size for very small screens */
+  @media only screen and (max-width: 300px) {
+    #card {
+      width: 90%; /* Adjust width for very small screens */
+      max-width: none; /* Remove max-width restriction */
+      margin: 2em auto; /* Adjust margin */
+    }
+    p.bokor{
+        font-size: 10pt !important;
+    }
+    p.kh{
+        font-size: 4pt !important;
+      }
+  }
 
 .heart-shape {
     position: relative;
